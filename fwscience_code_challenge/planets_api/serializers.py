@@ -13,3 +13,10 @@ class PlanetSerializer(serializers.ModelSerializer):
             "terrains",
             "climates",
         ]
+
+    terrains = serializers.ListField(
+        child=serializers.CharField(required=False), required=False
+    )
+    climates = serializers.ListField(
+        child=serializers.CharField(required=False), required=False
+    )
